@@ -20,10 +20,10 @@ sing_day <- function(dataset, line, phrase_col){
 
   if(line != 1) {
     map(line:2, ~cat(phrases[.x], ", \n", sep = ""))
-    cat("and", {phrases[1]}, ".", sep = "")
+    cat("and ", {phrases[1]}, ". \n\n", sep = "")
   }
 
   else {
-    cat({phrases[line]}, ".", sep = "")
+    cat({phrases[line]}, ". \n\n", sep = "")
   }
 }
