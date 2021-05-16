@@ -14,10 +14,16 @@
 #'
 #' @export
 sing_day <- function(dataset, line, phrase_col){
-
   phrases <- dataset %>% pull({{phrase_col}})
+  day_in_words <- dataset$Day.in.Words[line]
+  cat("On the", day_in_words, "day of Christmas, my true love sent to me,\n")
 
-  #????
+  if(line != 1) {
+    map(line:2, ~cat(phrases[.x], ", \n", sep = ""))
+    glue("and {phrases[1]}.")
+  }
 
-
+  else {
+    glue("{phrases[line]}.")
+  }
 }
