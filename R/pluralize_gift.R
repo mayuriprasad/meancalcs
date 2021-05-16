@@ -11,14 +11,12 @@
 #'
 #' @export
 pluralize_gift <- function(gift){
-  if (gift != "goose" & gift != "lady") {
-    gift <- str_c(gift, "s")
-  }
-  else if (gift == "goose") {
+  if (gift == "goose") {
     gift <- gift %>% str_replace("oo", "ee")
   }
-  else if (gift == "lady") {
-    gift <- gift %>% str_replace("y$", "ies")
+  else {
+    gift <- gift %>% str_replace("y$", "ie")
+    gift <- str_c(gift, "s")
   }
 
   return(gift)
