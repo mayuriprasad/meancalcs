@@ -24,6 +24,6 @@ sing_day <- function(dataset, line, phrase_col){
   }
 
   else {
-    cat({phrases[1]}, ". \n\n", sep = "")
+    cat({phrases[line]}, ". \n\n", sep = "")
   }
 }
