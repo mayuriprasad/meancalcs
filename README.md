@@ -1,2 +1,2 @@
-# twelvedays
- Package for singing the 12 days of Christmas son
+# meancalcs
+ Package for performing different sample mean calculations.
